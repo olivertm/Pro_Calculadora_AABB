@@ -10,7 +10,9 @@ package com.mycompany.pro_calculadora_aabb;
  */
 public class Calculadora {
     public static int Suma(int a, int b) {
-        return a+b;
+        int num1=a;
+        int num2=b;
+        return num1+num2;
     }
     public static int Resta(int a, int b) {
         return a-b;
