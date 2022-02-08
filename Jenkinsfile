@@ -3,21 +3,24 @@ pipeline {
 
         stages {
  
-            stage ('test') {
+            stage ('Unit Tests') {
                 steps {
                     sh "mvn clean compile test"
                 }
             }
 
-            stage ('Build application') {
+            stage ('Compile Pro_CalculadoraAABB') {
                 steps {
                     sh "mvn -f pom.xml clean install -Dmaven.test.skip=true"   
                 }
             }
   
-            stage ('Create docker image') {
+            stage ('Checkout Github') {
                 steps {
-                 echo "creando docker"
+                 checkout([
+                     branches: [[name: 'main']],
+                     url: 'https://github.com/olivertm/Pro_Calculadora_AABB.git'
+                 ])
                 }
 
             }
