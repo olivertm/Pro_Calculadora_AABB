@@ -16,9 +16,20 @@ public class Calculadora {
         return a-b;
     }
     
+    
+    public static int Multiplicacion(int a, int b) {
+        return a*b;
+    }
+    public static int Division(int a, int b) {
+        return a/b;
+    }
+    
     public static void main(String args[])
     {
         System.out.println("Suma de 1 + 3 = "+ Suma(1,3));
         System.out.println("Resta de 3 - 1 = "+ Resta(3,1));
+        
+        System.out.println("Multiplicación de 1 * 3 = "+ Multiplicacion(1,3));
+        System.out.println("Division de 3 / 3 = "+ Division(3,3));
     }
 }
