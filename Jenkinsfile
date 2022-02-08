@@ -14,15 +14,6 @@ pipeline {
                     sh "mvn -f pom.xml clean install -Dmaven.test.skip=true"   
                 }
             }
-  
-            stage ('Checkout Github') {
-                steps {
-                 checkout([
-                     branches: [[name: 'main']],
-                     url: 'https://github.com/olivertm/Pro_Calculadora_AABB.git'
-                 ])
-                }
-
-            }
+ 
         }
 }
